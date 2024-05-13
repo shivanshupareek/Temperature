@@ -1,13 +1,239 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  background-color: #e0e0e0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  width: 300px;
+  height: 500px;
+  border-radius: 36px;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #b1b1b1, -5px -5px 10px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  z-index: 5;
+}
+
+.temperatureMinus {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+  border-radius: 100px;
+  background: #001e57;
+  box-shadow: 5px 5px 15px #000c23, -5px -5px 15px #00308b;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperatureZero {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+  border-radius: 100px;
+  background: #0042aa;
+  box-shadow: 5px 5px 15px #001a44, -5px -5px 15px #006aff;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperatureTen {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+  border-radius: 100px;
+  background: #00c7fc;
+  box-shadow: 5px 5px 15px #005065, -5px -5px 15px #00ffff;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperatureTwenty {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+  border-radius: 100px;
+  background: #fec700;
+  box-shadow: 5px 5px 15px #665000, -5px -5px 15px #ffff;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperatureThirty {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+  border-radius: 100px;
+  background: #f5ec00;
+  box-shadow: 5px 5px 15px #625e00, -5px -5px 15px #ffff00;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperatureForty {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+  border-radius: 100px;
+  background: #ff8647;
+  box-shadow: 5px 5px 15px #66361c, -5px -5px 15px #ffd672;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temperatureFifty {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: white;
+  border-radius: 100px;
+  background: #831100;
+  box-shadow: 5px 5px 15px #340700, -5px -5px 15px #d21b00;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  border-radius: 81px;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 7px #b1b1b1, inset -5px -5px 7px #ffffff;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+
+button {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: rgb(112, 111, 111);
+  margin: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: rgb(62, 62, 62);
+}
+
+.buttons:hover {
+  background: #d2d2d2;
+  box-shadow: inset -5px -5px 7px #b1b1b1, inset 5px 5px 7px #ffffff;
+  color: white;
+}
+
+.slider {
+  cursor: pointer;
+  width: 200px;
+  height: 16px;
+  border: none;
+  border-radius: 43px;
+  color: #e0e0e0;
+  box-shadow: inset 3px 3px 8px #5a5a5a, inset -3px -3px 8px #ffffff;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: 2px 2px 8px #5a5a5a, -2px -2px 8px #ffffff;
+  appearance: none;
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.celcius {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 56px;
+  border-radius: 8px;
+  background: #e0e0e0;
+  box-shadow: 4px 4px 6px #5a5a5a, -4px -4px 6px #ffffff;
+}
+
+.fahrenheit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 56px;
+
+  border-radius: 8px;
+  background: #e0e0e0;
+  box-shadow: 4px 4px 9px #5a5a5a, -4px -4px 9px #ffffff;
+}
+
+.conversionBackground {
+  width: 210px;
+  height: 75px;
+  border-radius: 18px;
+  background: #e0e0e0;
+  box-shadow: inset 7px 7px 10px #5a5a5a, inset -7px -7px 10px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  overlay: none;
+  z-index: 1;
 }
